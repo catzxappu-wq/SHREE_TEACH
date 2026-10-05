@@ -1,0 +1,568 @@
+/**
+ * SHREE TEACH - Practice Mode, Mock Generator & PYQ Explorer Stylesheet
+ */
+
+.practice-page-container,
+.pyq-page {
+  max-width: 1100px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ========================================================
+   TOP TABS SWITCHER
+   ======================================================== */
+.practice-tabs-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.practice-mode-pills {
+  display: flex;
+  background-color: #E2E8F0;
+  padding: 0.35rem;
+  border-radius: var(--radius-md);
+  gap: 0.35rem;
+}
+
+.mode-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mode-pill.active {
+  background-color: #FFFFFF;
+  color: var(--primary-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.practice-help-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* ========================================================
+   PRACTICE FILTERS BAR
+   ======================================================== */
+.practice-filters-bar,
+.pyq-filters-card {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.p-filter-item,
+.filter-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.p-filter-item label,
+.filter-col label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-select,
+.form-control {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background-color: #FAFAFC;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  transition: border-color var(--transition-fast);
+}
+
+.form-select:focus,
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background-color: #FFFFFF;
+}
+
+/* ========================================================
+   PRACTICE QUESTION CARD
+   ======================================================== */
+.practice-question-card {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.practice-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.practice-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.p-chapter-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.practice-marking-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background-color: var(--bg-slate);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.practice-question-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.practice-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.practice-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 1.25rem;
+  background-color: #FAFAFC;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-main);
+}
+
+.practice-opt-btn:hover:not(:disabled) {
+  background-color: #EFF6FF;
+  border-color: #93C5FD;
+}
+
+.practice-opt-btn.active-opt {
+  background-color: #EFF6FF;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 1px var(--primary-light);
+}
+
+.practice-opt-btn.correct-opt {
+  background-color: #ECFDF5;
+  border-color: #10B981;
+  color: #065F46;
+  font-weight: 700;
+}
+
+.practice-opt-btn.wrong-opt {
+  background-color: #FEF2F2;
+  border-color: #EF4444;
+  color: #991B1B;
+}
+
+.p-opt-letter {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--primary-navy);
+}
+
+.p-opt-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.practice-numerical-input {
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.practice-numerical-input label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.practice-action-bar {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
+}
+
+/* Instant Evaluation Box */
+.practice-evaluation-box {
+  margin-top: 2rem;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid transparent;
+}
+
+.practice-evaluation-box.eval-success {
+  background-color: #ECFDF5;
+  border-color: #A7F3D0;
+}
+
+.practice-evaluation-box.eval-failure {
+  background-color: #FEF2F2;
+  border-color: #FECACA;
+}
+
+.eval-result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.eval-icon {
+  font-size: 1.85rem;
+}
+
+.eval-result-header strong {
+  font-size: 1.15rem;
+  display: block;
+}
+
+.eval-success strong { color: #065F46; }
+.eval-failure strong { color: #991B1B; }
+
+.eval-solution-content h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.eval-solution-content p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-main);
+}
+
+/* ========================================================
+   CUSTOM MOCK GENERATOR
+   ======================================================== */
+.generator-card {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.generator-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.5rem;
+}
+
+.gen-icon {
+  font-size: 2.5rem;
+}
+
+.generator-header h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.generator-header p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.generator-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.generator-preview-box {
+  background-color: var(--bg-slate);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gen-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gen-metric .lbl {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.gen-metric strong {
+  font-size: 1.15rem;
+  color: var(--primary-navy);
+}
+
+.generator-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========================================================
+   PYQ EXPLORER VIEW
+   ======================================================== */
+.pyq-header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pyq-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  letter-spacing: 1px;
+}
+
+.pyq-header-text h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin: 0.25rem 0;
+}
+
+.pyq-header-text p {
+  color: var(--text-secondary);
+}
+
+.pyq-count-badge {
+  background-color: var(--primary-subtle);
+  border: 1px solid #BFDBFE;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--primary-blue);
+}
+
+.pyq-count-badge strong {
+  font-size: 1.25rem;
+}
+
+.pyq-disclaimer-callout {
+  background-color: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  font-size: 0.85rem;
+  color: #92400E;
+  margin-bottom: 2rem;
+}
+
+.pyq-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.pyq-question-card {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pyq-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pyq-meta-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pyq-index-pill {
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.pyq-chap-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.tag-authentic {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1D4ED8;
+  background-color: #DBEAFE;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.tag-sample {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748B;
+  background-color: #F1F5F9;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.pyq-prompt {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.pyq-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pyq-opt-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background-color: var(--bg-slate);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.opt-highlight-correct {
+  background-color: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+  font-weight: 700;
+}
+
+.pyq-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.pyq-marks-info {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.pyq-solution-reveal {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background-color: #F8FAFC;
+  border-left: 4px solid var(--cbt-green);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.pyq-key-row {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.pyq-solution-body p {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .practice-filters-bar,
+  .pyq-filters-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .generator-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .practice-filters-bar,
+  .pyq-filters-card {
+    grid-template-columns: 1fr;
+  }
+}
